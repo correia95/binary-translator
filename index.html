@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f766e" />
+
+    <title>Binary Translator — text to binary and binary to text</title>
+    <meta
+      name="description"
+      content="Translate text to binary and binary back to text, plus hexadecimal, decimal and octal. Edit either box and the other updates. Full Unicode support via UTF-8, adjustable separators, and a character-by-character table. Runs in your browser, no sign-up."
+    />
+    <link rel="canonical" href="https://binary-translator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Binary Translator" />
+    <meta property="og:description" content="Text to binary and binary to text — plus hex, decimal and octal. Two-way, full Unicode, character table. Client-side, no sign-up." />
+    <meta property="og:url" content="https://binary-translator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://binary-translator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Binary Translator" />
+    <meta name="twitter:description" content="Text to binary and binary to text — plus hex, decimal and octal. Two-way, full Unicode, character table. Client-side." />
+    <meta name="twitter:image" content="https://binary-translator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Binary Translator",
+        "url": "https://binary-translator.correia95.workers.dev/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Convert text to and from binary, hexadecimal, decimal and octal over UTF-8 bytes, two-way, with a character-by-character breakdown, entirely in the browser."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I convert text to binary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Type or paste your text in the top box. Each character is encoded as its UTF-8 byte value in binary — for example the letter A is 01000001. English letters are one byte (eight bits) each; accented characters and emoji use two to four bytes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert binary back to text?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Paste the binary into the lower box and the text appears above. Groups can be separated by spaces, commas or line breaks, and unseparated binary is split into 8-bit bytes automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it support hexadecimal, decimal and octal too?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Switch the base selector to Hex, Decimal or Octal and both conversion directions use that base instead of binary."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my text sent anywhere?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The conversion runs entirely in your browser. The text is placed in the page URL so a result can be shared, and the page works offline once loaded."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This binary translator needs JavaScript. It converts text to binary and binary to text, plus
+        hexadecimal, decimal and octal.
+      </p>
+    </noscript>
+  </body>
+</html>
